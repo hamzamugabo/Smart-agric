@@ -2,10 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Sell;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class SellsController extends Controller
 {
+    public function index()
+    {
+        $sells = Sell::all();
+        return view('market.index', ['sells' => $sells]);
+    }
+
     public function store(Request $request){
         $validator = Validator::make($request->all(), [
             'title' => 'required|string',
@@ -16,18 +26,18 @@ class SellsController extends Controller
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 422);
         }
+        $user=User::find(1);
         $path = Storage::putFile('public',$request->file('image'));
         $url=Storage::url($path);
-        $blog = Blog::create(['image'=>$url,
+        $sell = Sell::create([
+            'image'=>$url,
+            'user_id'=>$user->id,
             'title'=>$request->title,
             'contact'=>$request->contact,
             'location'=>$request->location,
         ]);
-        $blog->save();
-//        return response([],'201');
-
-//        response($blog,'201');
-
-        return redirect()->route('blogs_path','','302');
+//        dd($sell);
+        $sell->save();
+        return redirect()->route('sells_path');
     }
 }

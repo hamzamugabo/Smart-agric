@@ -21,6 +21,7 @@ class CreateSellsTable extends Migration
             $table->string('title');
             $table->string('contact');
             $table->string('location');
+            $table->timestamps();
 
 
         });
