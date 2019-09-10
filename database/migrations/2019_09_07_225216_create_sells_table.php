@@ -18,6 +18,7 @@ class CreateSellsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('image')->nullable();
+            $table->string('seller')->nullable();
             $table->string('title');
             $table->string('contact');
             $table->string('location');

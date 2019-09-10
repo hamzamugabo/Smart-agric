@@ -55,6 +55,7 @@ class Sell extends Model
         'location',
         'contact',
         'user_id',
+        'seller',
     ];
 
     /**
@@ -63,6 +64,7 @@ class Sell extends Model
      * @var array
      */
     protected $hidden = [
+
     ];
 
 

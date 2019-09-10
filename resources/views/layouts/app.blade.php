@@ -118,7 +118,7 @@
 
         
           <nav class="navbar navbar-dark bg-dark" style=" ">
-    <a class="navbar-brand" href="#" style="color:white;font-size:30px;">Sell with us</a>
+    <a class="navbar-brand" href="/home" style="color:white;font-size:30px;">Sell with us</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

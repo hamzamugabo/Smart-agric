@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Sell;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
@@ -31,7 +32,8 @@ class SellsController extends Controller
         $url=Storage::url($path);
         $sell = Sell::create([
             'image'=>$url,
-            'user_id'=>$user->id,
+            'user_id'=>$user = Auth::user()->id,
+            'seller'=>$user = Auth::user()->name,
             'title'=>$request->title,
             'contact'=>$request->contact,
             'location'=>$request->location,
