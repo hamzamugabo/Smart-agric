@@ -21,16 +21,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="contact number" class="col-md-4 col-form-label text-md-right">{{ __('Contact Number') }}</label>
-
-                        <div class="col-md-6">
-                            <input id="contact" type="text" class="form-control " name="contact" value="{{ old('contact') }}" required autocomplete="contact" placeholder="Phone Number">
-
-
-                        </div>
-                    </div>
-
 
                     <div class="form-group row">
                         <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>

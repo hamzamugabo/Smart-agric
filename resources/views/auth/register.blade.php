@@ -39,6 +39,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group row{{ $errors->has('contact') ? ' has-error' : '' }}">
+                            <label for="contact" class="col-md-4 col-form-label text-md-right">{{ __('Contact Number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="contact" type="text" class="form-control" name="contact" value="{{ old('contact') }}" required autofocus >
+
+                                @if ($errors->has('contact'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('contact') }}</strong>
+                                    </span>
+
+                                @endif
+                            </div>
+                        </div>
+
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

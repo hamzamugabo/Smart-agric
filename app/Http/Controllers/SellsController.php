@@ -20,8 +20,8 @@ class SellsController extends Controller
     public function store(Request $request){
         $validator = Validator::make($request->all(), [
             'title' => 'required|string',
-            'contact' => 'required|string',
             'location' => 'required|string',
+            'contact' => ['numeric','digits_between:10,13'],
         ]);
 
         if ($validator->fails()) {
@@ -34,11 +34,10 @@ class SellsController extends Controller
             'image'=>$url,
             'user_id'=>$user = Auth::user()->id,
             'seller'=>$user = Auth::user()->name,
+            'contact'=>$user = Auth::user()->contact,
             'title'=>$request->title,
-            'contact'=>$request->contact,
             'location'=>$request->location,
         ]);
-//        dd($sell);
         $sell->save();
         return redirect()->route('sells_path');
     }
