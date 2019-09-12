@@ -17,10 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/sells','SellsController@index')->name('sells_path');
-Route::get('/sells/products','SellsController@index_product')->name('sells_products_path');
+Route::get('/sells','SellsController@index_product')->name('sells_products_path');
 Route::post('/sells', 'SellsController@store')->name('store_sells_path');
 
 Route::get('/sells/{id}', 'SellsController@show')->name('blog_path');

@@ -11,9 +11,7 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-/**
- * @see \App\Http\Controllers\Auth\VerificationController
- */
+
 class VerificationControllerTest extends TestCase
 {
     use RefreshDatabase;

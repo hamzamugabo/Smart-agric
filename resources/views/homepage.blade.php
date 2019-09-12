@@ -9,11 +9,10 @@
           Welcome to "SMART-AGRIC"
 Buy and sell your Agric produce online (Buyers meet Farmers) – Sell your produce directly to buyers without middlemen and
 make more money from your farm produce.
-It’s evident that India has one of the largest agricultural markets around the world, which is why it
+It’s evident that Uganda has one of the largest agricultural markets around the East Africa, which is why it
 becomes important to have a service, which can connect the farmers all over the country. This would help
  them in maximizing their profits by selling their farm produce
  at a better price by selling locally or where farmer get maximum price.<br>
- <button class="button" style="size: 20px;">Know more</button>
 
         </div>
         <div class="col-md-1"></div>

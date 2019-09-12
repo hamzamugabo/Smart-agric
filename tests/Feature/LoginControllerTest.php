@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-/**
- * @see \App\Http\Controllers\Auth\LoginController
- */
+
 class LoginControllerTest extends TestCase
 {
     use RefreshDatabase;

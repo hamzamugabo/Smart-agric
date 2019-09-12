@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-/**
- * @see \App\Http\Controllers\Auth\ForgotPasswordController
- */
+
 class ForgotPasswordControllerTest extends TestCase
 {
     use RefreshDatabase;

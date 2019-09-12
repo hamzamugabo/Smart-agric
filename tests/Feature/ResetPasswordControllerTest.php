@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-/**
- * @see \App\Http\Controllers\Auth\ResetPasswordController
- */
+
 class ResetPasswordControllerTest extends TestCase
 {
     use RefreshDatabase;

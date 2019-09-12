@@ -21,6 +21,13 @@
                         </div>
                     </div>
 
+                    <div class="form-group row">
+                        <label for="produce name" class="col-md-4 col-form-label text-md-right">{{ __('Produce Name') }}</label>
+
+                        <div class="col-md-6">
+                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="eg Beans.." autofocus>
+                        </div>
+                    </div>
 
                     <div class="form-group row">
                         <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>
