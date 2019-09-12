@@ -20,4 +20,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/sells','SellsController@index')->name('sells_path');
+Route::get('/sells/products','SellsController@index_product')->name('sells_products_path');
 Route::post('/sells', 'SellsController@store')->name('store_sells_path');
+
+Route::get('/sells/{id}', 'SellsController@show')->name('blog_path');
+Route::get('/sells/{id}/edit', 'SellsController@edit')->name('edit_blog_path');
+Route::put('/sells/{id}','SellsController@update')->name('update_blog_path');
+Route::delete('/sells/{id}','SellsController@delete')->name('delete_blog_path');

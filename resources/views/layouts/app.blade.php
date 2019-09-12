@@ -128,7 +128,7 @@
           <a class="nav-link" href="{{'/'}}">HOME <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">PRODUCTS</a>
+          <a class="nav-link" href="{{route('sells_products_path')}}">PRODUCTS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">PRICING</a>

@@ -13,7 +13,7 @@ It’s evident that India has one of the largest agricultural markets around the
 becomes important to have a service, which can connect the farmers all over the country. This would help
  them in maximizing their profits by selling their farm produce
  at a better price by selling locally or where farmer get maximum price.<br>
- <button class="button" style="vertical-align:middle"><span>Know more</span></button>
+ <button class="button" style="size: 20px;">Know more</button>
 
         </div>
         <div class="col-md-1"></div>
