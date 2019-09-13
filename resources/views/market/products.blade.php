@@ -170,30 +170,34 @@
         @foreach($sells as $sell)
             <div class="card">
 
-                <div class="row">
+                <div class="row ">
 
-                    <div class="col-md-4" >
+                    <div class="col pl-lg-5" >
 
                         <img src="{{asset($sell->image)}}"  class="rounded-circle" alt="" >
                     </div>
-                    <div class="col-md-4">
-                        <h5>Type:</h5>{{$sell->title}}
-                        <h6>Produce name:</h6>
-                      <p>  <span style="font-size: 10px">Location:</span>{{$sell->location}}
-                          Posted
-                          {{$sell->created_at->diffForHumans()}}
-
+                    <div class="col pl-lg-0" >
+                        <p>
+                      <strong style="font-size: 15px;"> Type:</strong>
+                        {{$sell->title}}
+                        </p>
+                        <strong>Produce name:</strong>
+                      <p>
+                          <br>
+                          <strong style="font-size: 15px">Location:</strong>{{$sell->location}}
                       </p>
+                          <strong>Posted</strong>
+                          {{$sell->created_at->diffForHumans()}}
 
 
                     </div>
-                    <div class="col-md-4">
+                    <div class="col pl-lg-0">
                         Ad Type:<br>
                         Condition :<br>
                         Visits :<br>
                         Seller Name : {{$sell->seller}}<br>
                         Phone Contact: {{$sell->contact}}<br>
-                        <a href="" class="btn btn-outline-success">VIEW PRODUCE</a>
+                        <a href="" class="btn btn-success">VIEW PRODUCE</a>
                     </div>
                 </div>
             </div>
