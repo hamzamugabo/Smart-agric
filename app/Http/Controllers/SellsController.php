@@ -49,7 +49,7 @@ class SellsController extends Controller
         $sell->title=$request->title;
         $sell->location=$request->location;
         $sell->update();
-        return redirect()->route('blogs_path',['sell'=>$sell]);
+        return redirect()->route('sells_path',['sell'=>$sell]);
 
     }
 
@@ -58,7 +58,7 @@ class SellsController extends Controller
             'title' => 'required|string',
             'location' => 'required|string',
             'name' => 'required|string',
-            'contact' => ['numeric','digits_between:10,13'],
+            'contact' => ['string','min:10'],
         ]);
 
         if ($validator->fails()) {

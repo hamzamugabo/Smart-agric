@@ -118,71 +118,53 @@
     </nav>
 
 
-    <nav class="navbar navbar-dark bg-dark" style=" ">
-        <a class="navbar-brand" href="/home" style="color:white;font-size:30px;">Sell with us</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav" style="font-size:25px;color:white;">
-            <ul class="navbar-nav ml-auto " style="color: white;">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{'/'}}">HOME <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('sells_products_path')}}">PRODUCTS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">PRICING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">BUY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">MARKET</a>
-                </li>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/home') }}">
+                Sell with us
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto" style="font-size:20px;">
+                    <!-- Authentication Links -->
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="{{route('sells_products_path')}}">{{ __('HOME') }}</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="{{route('sells_products_path')}}">{{ __('Products') }}</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="{{ route('login') }}">{{ __('Pricing') }}</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="{{ route('login') }}">{{ __('Buy') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="{{ url('/home') }}">{{ __('Market') }}</a>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
     </nav>
 
 
     <main class="py-4">
 
-            {{--<div class="row">--}}
-                {{--@foreach($sells as $sell)--}}
-                    {{--<div class="" style="text-align: center;padding-left:100px;">--}}
-                        {{--<br>--}}
-                        {{--<br>--}}
 
-                        {{--<div class="" style="padding-bottom:15px;">--}}
-                            {{--<div class="card-header">--}}
-                                {{--<a href="{{route('blog_path',['sells'=>$sell->id])}}"> {{$sell->title}}</a>--}}
-
-                            {{--</div>--}}
-
-                            {{--<div class="card-body">--}}
-                                {{--<span style="font-size:20px">Phone Contact:</span> {{$sell->contact}}<br>--}}
-                                {{--<span style="font-size: 20px">Location:</span>{{$sell->location}}<br>--}}
-                                {{--<span style="font-size: 20px">Seller:</span>{{$sell->seller}}<br>--}}
-                                {{--<div class="col">--}}
-
-                                    {{--<img src="{{asset($sell->image)}}"  class="rounded-circle" alt="" >--}}
-
-                                    {{--<a href="{{route('sells_path')}}" class="btn btn-outline-secondary">Buy</a>--}}
-                                    {{--<p class="lead">--}}
-                                        {{--Posted--}}
-                                        {{--{{$sell->created_at->diffForHumans()}}--}}
-
-                                    {{--</p>--}}
-                                    {{--<a href="" class="btn btn-outline-secondary">Back</a>--}}
-                                {{--</div>--}}
-                                {{--<br>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-
-                    {{--</div>--}}
-                {{--@endforeach--}}
-            {{--</div>--}}
 
             <div class="container">
         @foreach($sells as $sell)

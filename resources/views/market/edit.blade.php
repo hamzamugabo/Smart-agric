@@ -2,6 +2,11 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="card">
+            <div class="card-header">Edit Produce</div>
+            <div class="car-body">
     <form action="{{route('update_blog_path',['sell'=>$sell->id])}}" method="post" enctype="multipart/form-data">
 
         @csrf
@@ -16,8 +21,8 @@
         </div>
 
         <div class="form-group">
-            <label for="title">Content</label>
-            <textarea name="contents" rows="10" class="form-control" >{{$sell->location}}</textarea>
+            <label for="title">Location</label>
+            <input type="text" name="location" class="form-control" value="{{$sell->location}}" >
 
         </div>
         <div class="form-group">
@@ -27,4 +32,8 @@
         </div>
 
     </form>
+            </div>
+        </div>
+    </div>
+    </div>
 @endsection
