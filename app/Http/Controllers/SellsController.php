@@ -85,6 +85,6 @@ class SellsController extends Controller
         $sell = Sell::find($id);
         $sell->delete();
 
-        return redirect()->route('sells_products_path');
+        return redirect()->route('sells_path');
     }
 }
