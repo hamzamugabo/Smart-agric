@@ -36,6 +36,9 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                                <a class="btn btn-link " href="{{ route('register') }}">
+                                    {{ __('click here to register') }}
+                                </a>
                             </div>
                         </div>
 
@@ -62,8 +65,11 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
                             </div>
-                        </div>
+                            </div>
+
+
                     </form>
                 </div>
             </div>
