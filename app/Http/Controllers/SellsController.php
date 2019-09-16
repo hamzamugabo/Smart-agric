@@ -11,12 +11,23 @@ use Illuminate\Support\Facades\Validator;
 
 class SellsController extends Controller
 {
+    /**
+     * Display seller posted produce seen only by the seller.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     *
+     */
     public function index()
     {
         $sells = Sell::all();
         return view('market.index', ['sells' => $sells]);
     }
 
+    /**
+     * Display posted produce, seen by buyer and seller.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index_product()
     {
         $sells = Sell::all();
@@ -25,6 +36,8 @@ class SellsController extends Controller
     }
 
     /**
+     * Display specific produce clicked on by the buyer
+     *
      * @param $id
      * @param $blog_id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -36,6 +49,13 @@ class SellsController extends Controller
         return view('market.show', ['sell' => $sell,]);
     }
 
+    /**
+     * Display form to edit the produce by the seller.
+     *
+     * @param $id
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function edit($id)
     {
         $sell = Sell::find($id);
@@ -43,6 +63,15 @@ class SellsController extends Controller
         return view('market.edit', ['sell'=>$sell]);
     }
 
+    /**
+     * Update produce.
+     *
+     * @param Request $request
+     *
+     * @param $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(Request $request,$id)
     {
         $sell= Sell::find($id);
@@ -50,9 +79,15 @@ class SellsController extends Controller
         $sell->location=$request->location;
         $sell->update();
         return redirect()->route('sells_path',['sell'=>$sell]);
-
     }
 
+    /**
+     * Store/create produce.
+     *
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request){
         $validator = Validator::make($request->all(), [
             'title' => 'required|string',
@@ -80,6 +115,13 @@ class SellsController extends Controller
         return redirect()->route('sells_path');
     }
 
+    /**
+     * Delete/destroy produce.
+     *
+     * @param $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function delete($id)
     {
         $sell = Sell::find($id);
@@ -87,4 +129,5 @@ class SellsController extends Controller
 
         return redirect()->route('sells_path');
     }
+    
 }
