@@ -27,3 +27,7 @@ Route::get('/sells/{id}', 'SellsController@show')->name('blog_path');
 Route::get('/sells/{id}/edit', 'SellsController@edit')->name('edit_blog_path');
 Route::put('/sells/{id}','SellsController@update')->name('update_blog_path');
 Route::delete('/sells/{id}','SellsController@delete')->name('delete_blog_path');
+
+
+Route::get('index','SearchDataController@index');
+Route::get('search','SearchDataController@result');

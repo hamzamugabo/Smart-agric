@@ -3,9 +3,9 @@
 @section('content')
     <div class="row">
         @foreach($sells as $sell)
-            <div class="col-md-2">
+            <div class="col-md-3 border-right">
                 <br>
-                <br>
+
                 <div class="" style="padding-bottom:15px;">
                     <div class="card-header">
                         <a href="{{route('blog_path',['sell'=>$sell->id])}}"> {{$sell->title}}</a>
@@ -18,13 +18,14 @@
                             <a href="{{route('blog_path',['sell'=>$sell->id])}}">
                             <img src="{{asset($sell->image)}}"  class="rounded-circle" alt="" ></a>
 
-                        <p class="lead" style="font-size: 20px;">
+                        <p class="" >
                             Posted
                             {{$sell->created_at->diffForHumans()}}
                         </p>
+
                             <a href="{{route('edit_blog_path', ['sell'=>$sell->id])}}" class="btn btn-outline-info">Edit</a>
 
-                            {{--<a href="{{route('blogs_path')}}" class="btn btn-outline-secondary">Back</a>--}}
+                            <a href="{{route('home')}}" class="btn btn-outline-secondary">back</a>
 
                             <form action="{{route('delete_blog_path',['sell'=>$sell->id])}}" method="POST" class="p-3">
                                 @csrf
@@ -32,6 +33,7 @@
                                 <button type="submit" class="btn btn-outline-danger">Delete</button>
 
                             </form>
+
                         </div>
                         <br>
                 </div>

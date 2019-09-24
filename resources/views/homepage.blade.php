@@ -23,10 +23,7 @@ becomes important to have a service, which can connect the farmers all over the 
                     <label for="exampleFormControlInput1" style="font-size: 20px;">What are you looking for</label>
                 </div>
 
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Title</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="What are you looking for..">
-                </div>
+               
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Select Category</label>
                     <select class="form-control" id="exampleFormControlSelect1">
