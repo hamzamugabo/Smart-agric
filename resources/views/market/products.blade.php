@@ -137,7 +137,7 @@
                 <ul class="navbar-nav ml-auto" style="font-size:20px;">
                     <!-- Authentication Links -->
                     <li class="nav-item">
-                        <a class="navbar-brand" href="{{route('sells_products_path')}}">{{ __('HOME') }}</a>
+                        <a class="navbar-brand" href="{{url('/')}}">{{ __('HOME') }}</a>
                     </li>
 
                     <li class="nav-item">
@@ -145,11 +145,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="navbar-brand" href="{{ route('login') }}">{{ __('Pricing') }}</a>
+                        <a class="navbar-brand" href="">{{ __('Pricing') }}</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="navbar-brand" href="{{ route('login') }}">{{ __('Buy') }}</a>
+                        <a class="navbar-brand" href="{{route('sells_products_path')}}">{{ __('Buy') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="navbar-brand" href="{{ url('/home') }}">{{ __('Market') }}</a>
@@ -167,6 +167,16 @@
 
 
             <div class="container">
+                <div class=" ">
+                    <form action="" method="" class="form-inline ml-auto">
+                        <div class="form-group">
+                            <p class="">
+                                <input type="text" class="form-control mr-sm-2" id="search" placeholder="Search.." aria-label="Search">
+                                <button class="btn btn-secondary  btn-rounded btn-sm my-0" type="submit">Search</button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
         @foreach($sells as $sell)
             <div class="card">
 

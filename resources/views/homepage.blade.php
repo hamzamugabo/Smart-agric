@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row" style="display: flex;padding-top: 20px; ">
 
-        <div class="col-md-7 container-banner__left" style="background-color: transparent;">
+        <div class="col-md-5 container-banner__left border-right" style="background-color: transparent;">
           Welcome to "SMART-AGRIC"
 Buy and sell your Agric produce online (Buyers meet Farmers) – Sell your produce directly to buyers without middlemen and
 make more money from your farm produce.
@@ -15,7 +15,6 @@ becomes important to have a service, which can connect the farmers all over the 
  at a better price by selling locally or where farmer get maximum price.<br>
 
         </div>
-        <div class="col-md-1"></div>
 
         <div class="col-md-4 container-banner__right hidden-sm-down">
             <form>
@@ -23,7 +22,7 @@ becomes important to have a service, which can connect the farmers all over the 
                     <label for="exampleFormControlInput1" style="font-size: 20px;">What are you looking for</label>
                 </div>
 
-               
+
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Select Category</label>
                     <select class="form-control" id="exampleFormControlSelect1">
@@ -45,15 +44,58 @@ becomes important to have a service, which can connect the farmers all over the 
                         <button type="submit" class="btn btn-info">Search</button>
                     </div>
                 </div>
-
-
-
             </form>
 
+        </div>
+
+        <div class="col-md-2 border-left">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"> </li>
+                    <li data-target="#myCarousel" data-slide-to="2" ></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src=""alt="Chania">
+
+                        <div class="carousel-caption">
+                            <h3>Loas Angels</h3>
+                            <p>LA ia always so much fun!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src=""alt="Chicago">
+                        <div class="carousel-caption">
+                            <h3>Chicago</h3>
+                            <p>Thank you, Chicago!</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src=""alt="Chicago">
+                        <div class="carousel-caption">
+                            <h3>Chicago</h3>
+                            <p>Thank you, Chicago!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#myCarousel" data-slide ="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="right carousel-control" href="#myCarousel" data-slide ="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
 
 
-
-    </div>
     <div class="row" style="padding-top: 10px;">
         <div class="col-md-12 container-banner__right hidden-sm-down" style="background-color:;">
           <P style="text-align:center;font-size:24px;">SELECT A PRODUCT TO BUY/SELL<P>

@@ -129,5 +129,5 @@ class SellsController extends Controller
 
         return redirect()->route('sells_path');
     }
-    
+
 }

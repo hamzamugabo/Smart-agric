@@ -21,15 +21,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    {{--coppied--}}
-    {{--<link rel="stylesheet" href="{{asset('css/app.css')}}">--}}
-    {{--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">--}}
-    {{--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>--}}
-    {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>--}}
-    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>--}}
-
-    {{--endcoppied--}}
-
 
 </head>
 <body>
@@ -167,11 +158,11 @@
                             </li>
 
                         <li class="nav-item">
-                            <a class="navbar-brand" href="{{ route('login') }}">{{ __('Pricing') }}</a>
+                            <a class="navbar-brand" href="">{{ __('Pricing') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="navbar-brand" href="{{ route('login') }}">{{ __('Buy') }}</a>
+                            <a class="navbar-brand" href="{{route('sells_products_path')}}">{{ __('Buy') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="navbar-brand" href="{{ url('/home') }}">{{ __('Market') }}</a>
@@ -182,35 +173,6 @@
 
             </div>
         </nav>
-
-        
-          {{--<nav class="navbar navbar-dark bg-dark" style=" ">--}}
-    {{--<a class="navbar-brand" href="/home" style="color:white;font-size:30px;">Sell with us</a>--}}
-    {{--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">--}}
-      {{--<span class="navbar-toggler-icon"></span>--}}
-    {{--</button>--}}
-    {{--<div class="collapse navbar-collapse" id="navbarNav" style="font-size:25px;color:white;">--}}
-      {{--<ul class="navbar-nav ml-auto " style="color: white;">--}}
-        {{--<li class="nav-item active">--}}
-          {{--<a class="nav-link" href="{{'/'}}">HOME <span class="sr-only">(current)</span></a>--}}
-        {{--</li>--}}
-        {{--<li class="nav-item">--}}
-          {{--<a class="nav-link" href="{{route('sells_products_path')}}">PRODUCTS</a>--}}
-        {{--</li>--}}
-        {{--<li class="nav-item">--}}
-          {{--<a class="nav-link" href="#">PRICING</a>--}}
-        {{--</li>--}}
-        {{--<li class="nav-item">--}}
-          {{--<a class="nav-link" href="#">BUY</a>--}}
-        {{--</li>--}}
-        {{--<li class="nav-item">--}}
-          {{--<a class="nav-link" href="#">MARKET</a>--}}
-        {{--</li>--}}
-
-      {{--</ul>--}}
-    {{--</div>--}}
-  {{--</nav>--}}
-
 
         <main class="py-4">
           <div style="background-color:white;">
