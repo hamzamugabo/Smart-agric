@@ -112,7 +112,11 @@ class SellsController extends Controller
             'location'=>$request->location,
         ]);
         $sell->save();
-        return redirect()->route('sells_path');
+
+        $sells = Sell::all();
+        return view('market.index', ['sells' => $sells]);
+
+//        return redirect()->route('sells_path');
     }
 
     /**

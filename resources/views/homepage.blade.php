@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="container">
     <div class="row" style="display: flex;padding-top: 20px; ">
 
@@ -36,12 +37,12 @@ becomes important to have a service, which can connect the farmers all over the 
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Location</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Location..">
+                    <input type="text" class="form-control"  name="location" value="{{ old('location') }}" placeholder="Location..">
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-info">Search</button>
+                        <button type="submit" class="btn btn-dark">Search</button>
                     </div>
                 </div>
             </form>
@@ -49,50 +50,53 @@ becomes important to have a service, which can connect the farmers all over the 
         </div>
 
         <div class="col-md-2 border-left">
+            <div class="slideshow-container">
 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"> </li>
-                    <li data-target="#myCarousel" data-slide-to="2" ></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src=""alt="Chania">
-
-                        <div class="carousel-caption">
-                            <h3>Loas Angels</h3>
-                            <p>LA ia always so much fun!</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src=""alt="Chicago">
-                        <div class="carousel-caption">
-                            <h3>Chicago</h3>
-                            <p>Thank you, Chicago!</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src=""alt="Chicago">
-                        <div class="carousel-caption">
-                            <h3>Chicago</h3>
-                            <p>Thank you, Chicago!</p>
-                        </div>
-                    </div>
+                <div class="mySlides fade">
+                    <img src="{{ asset('images/fruits.png') }}" style="width:100%">
+                    <div class="text">Fruits</div>
                 </div>
 
-                <a class="left carousel-control" href="#myCarousel" data-slide ="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
+                <div class="mySlides fade">
+                    <img src="{{ asset('images/vege.png') }}" style="width:100%">
+                    <div class="text">Vegetables</div>
+                </div>
 
-                <a class="right carousel-control" href="#myCarousel" data-slide ="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="mySlides fade">
+                    <img src="{{ asset('images/poultry.png') }}" style="width:100%">
+                    <div class="text">Poultry</div>
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
 
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    setTimeout(showSlides, 2500); // Change image every 2 seconds
+                }
+            </script>
         </div>
 
 

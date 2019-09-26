@@ -9,47 +9,51 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class SellsControllerTest extends TestCase
 {
-    public function test_can_view_posted_when_authenticated()
+    use RefreshDatabase;
+
+    public function test_can_login_displays_the_login_form()
     {
-        $user = factory(User::class)->make();
-//        dd($user);
-        $sell = factory(Sell::class)->create();
+        $response = $this->get(route('login'));
 
-        $response = $this->post(route('store_sells_path'), [
-            'image'=>'',
-            'user_id'=>$sell->user_id,
-            'seller'=>$sell->name,
-            'contact'=>$sell->contact,
-            'title'=>$sell->title,
-            'name'=>$sell->name,
-            'location'=>$sell->location,
-        ]);
-
-//        $response->assertStatus(201);
-        $response->assertSuccessful();
-        $response->assertRedirect(route('sells_path'));
-
-//        $response=$this->actingAs($user)
-//            ->visit(route('store_sells_path'))
-//            ->type('fruits','name')
-//            ->type('apple','name')
-//            ->type('location','location')
-//            ->press('ell/market')
-//            ->seePageIa(route('sells_path'));
-//
-//        $response->assertStatus(201);
-
-
-
-
+        $response->assertStatus(200);
+        $response->assertViewIs('auth.login');
     }
 
-    public function test_cant_visit_product_when_authenticated()
+    public function test_can_login_displays_validation_errors()
     {
-        $user = factory(User::class)->make();
+        $response = $this->post('/login', []);
 
-        $response = $this->actingAs($user)->get(route('sells_products_path'));
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors('email');
+    }
 
-        $response->assertRedirect(route('sells_path'));
+//    public function test_can_view_posted_when_authenticated()
+//    {
+////        $user = factory(User::class)->make();
+////        dd($user);
+//        $sell = factory(Sell::class)->make();
+////        dd($sell);
+//
+//        $response = $this->post(route('store_sells_path'), [
+//            'title'=>'cereals',
+//            'name'=>'beans',
+//            'location'=>'kampala',
+//            'image'=>'',
+//            'user_id'=>$sell->user_id,
+//            'seller'=>$sell->name,
+//            'contact'=>$sell->contact,
+//        ]);
+//
+//        $response->assertRedirect(route('sells_path'));
+////        $response->assertViewIs('market.index');
+//
+//    }
+
+    public function test_can_visit_product_when_not_authenticated()
+    {
+        $response = $this->get(route('sells_products_path'));
+
+        $response->assertSuccessful();
+        $response->assertViewIs('market.products');
     }
 }
